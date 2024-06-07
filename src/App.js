@@ -6,7 +6,6 @@ import About from './About';
 
 function App() {
 
-  // const [ipAddress, setIpAddress] = useState('');
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
@@ -22,28 +21,13 @@ function App() {
         console.error("Error fetching data:", err);
         setError("Error fetching data. Please try again.");
       });
-  }, []);
+  },[]);
 
-  // const handleSearch = () => {
-  //   handleclear();
-  //   setIpAddress('');
-  //   setError(null);
-  // }
-
-  // const handleclear = () => {
-  //   setIpAddress('');
-  // }
 
     return (
       <>
         <div className='App'>
-          {/* <input
-            type='text'
-            placeholder='Enter IP Address'
-            value={ipAddress}
-            onChange={(e) => setIpAddress(e.target.value)}
-          />
-          <button onClick={handleSearch}>Search</button> */}
+
 
           {error && <p>{error}</p>}
 
